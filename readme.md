@@ -4,7 +4,7 @@
 
 ## A Happy Birthday animation design in CSS3, HTML5.
 
-URL: https://shizu-ka.github.io/birthday-website/
+URL: https://shizu-ka.github.io/Birthday-Website/
 
 Technology Used: HTML5 CSS3 jQuery
 
