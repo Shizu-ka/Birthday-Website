@@ -1,3 +1,4 @@
+# Give a star if you are helped by this repo 🙏
 # Happy Birthday
 
 ![ss5](https://github.com/Shizu-ka/Birthday-Website/assets/58659139/323ade9d-a5f4-40bf-a7ca-0df2c115c590)
