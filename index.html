@@ -9,21 +9,23 @@
 	<meta charset="UTF-8" />
 	<meta name="description" content="Happy Birthday Anggie">
 	<meta name="robots" content="index, follow" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 	<link rel="author" href="alex" /> 
     <meta name="keywords" content="Birthday, Happy">
+
     <!-- Strat of Facebook Meta -->
     <meta property="og:type" content="E-Greeting" />
     <meta property="og:image" content="favicon.ico" />
     <meta property="og:description" content="Wish you a very Happy Birthday">
     <!-- End of Facebook Meta Tags -->
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="loading.css">
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="css/loading.css">
 	<link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
 	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'> -->
 	<link rel="stylesheet/less" href="cake.less"> 
@@ -32,10 +34,9 @@
     /* ============================================== POSITION
 */
 .cake {
-  position: absolute;
+  position: relative; /* instead of absolute */
   display: none;
-  left: 50%;
-  margin-left: -150px;
+  margin: 0 auto; /* center the cake horizontally */
   width: 300px;
   height: 300px;
 }
@@ -258,6 +259,34 @@
   top: 60%;
   left: 0;
 }
+
+/* ============================================== Album
+*/
+.album-photo {
+  display: none;
+  position: absolute;
+  width: 300px; /* looks like landscape photo */
+  height: auto;
+  border: 5px solid white;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.album-photo:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 10;
+}
+
+/* Left side */
+.album-left-1 { top: 30px; left: 50px; transform: rotate(-5deg); }
+.album-left-2 { top: 205px; left: 70px; transform: rotate(4deg); }
+
+/* Right side */
+.album-right-1 { top: 30px; right: 50px; transform: rotate(5deg); }
+.album-right-2 { top: 205px; right: 70px; transform: rotate(-4deg); }
+
+
 /* ============================================== TEXT
 */
 h1,
@@ -274,11 +303,14 @@ p {
 }
 
 .profile-img {
-  position: absolute;
-  left: 400px;
-  top: 150px;
+  position: absolute; /* relative to .cake */
+  bottom: 30px;  /* 10px below cake */
+  right: -170px;  /* 70px to the right of cake */
   width: 150px;
-  height: 150px; 
+  height: 150px;
+  border: 5px solid white;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  border-radius: 10px;
 }
 
 </style>
@@ -287,8 +319,16 @@ p {
 
 <body>
 	<div class="loading"></div>
+  <img src="assets/images/photo1.jpg" class="album-photo album-left-1">
+  <img src="assets/images/photo2.jpg" class="album-photo album-left-2">
+  <img src="assets/images/photo3.jpg" class="album-photo album-right-1">
+  <img src="assets/images/photo4.jpg" class="album-photo album-right-2">
+
+  <!-- Hint image -->
+  <img src="assets/images/can-zoom.png" class="can-zoom">
+
 	<audio class="song" controls loop>
-        <source src="hbd.mp3"></source>
+        <source src="assets/audio/hbd.mp3"></source>
 	   Your browser isn't invited for super fun audio time.
     </audio>
     <div class="balloons text-center" id="b1">
@@ -301,19 +341,19 @@ p {
     	<h2 style="color:#D14D39;">D</h2>
     </div>
 	<div class="balloons text-center" id="b4">
-    	<h2 style="color:#8FAD00;">Z</h2>
+    	<h2 style="color:#8FAD00;">B</h2>
     </div>
 	<div class="balloons text-center" id="b5">
-    	<h2 style="color:#8377E4;">Z</h2>
+    	<h2 style="color:#8377E4;">A</h2>
     </div>
     <div class="balloons text-center" id="b6">
-    	<h2 style="color:#99C96A;">Z</h2>
+    	<h2 style="color:#99C96A;">B</h2>
     </div>
     <div class="balloons text-center" id="b7">
-    	<h2 style="color:#20CFB4;">Z</h2>
+    	<h2 style="color:#20CFB4;">Y</h2>
     </div>
 
-    <img src="Balloon-Border.png" width="100%" class="balloon-border">
+    <img src="assets/images/Balloon-Border.png" width="100%" class="balloon-border">
  
 
 	<div class="container">
@@ -340,7 +380,7 @@ p {
 		</div>
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<img src="banner.png" class="bannar">
+				<img src="assets/images/banner.png" class="bannar">
 			</div>
 		</div>
 		<!-- <div class="row message">
@@ -357,7 +397,7 @@ p {
 				    <div class="fuego"></div>
 				  </div>
 				  <div class="cobertura"></div>
-          <img src="person.png" class="profile-img">
+          <img src="assets/images/person.png" class="profile-img">
 				  <div class="bizcocho"></div>
 				</div>
 			</div>
@@ -410,8 +450,7 @@ p {
 				<p>and make it the best memory..</p>
 				<p>lastly...</p>
 				<p>I'd like to wish you one more time</p>
-				<p>a very happy birthday zzz ❤️</p>
-        <p>❤️</p>
+				<p>a very happy birthday babyy ❤️</p>
 			</div>
 		</div>
 		<div class="navbar navbar-fixed-bottom">
@@ -442,10 +481,13 @@ p {
 
 
 	</div>
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="zoomed photo">
+  </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="effect.js"></script>
+<script src="js/effect.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SQ2H9J48M"></script>
 <script>
