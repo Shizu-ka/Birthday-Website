@@ -37,3 +37,13 @@ Just go to index.html and change all the alphabets you want
 ```
 Just go to index.html and change all the messages you want 
 ```
+
+### LICENSE
+<a href="https://creativecommons.org/licenses/by-nc/4.0/">
+  <img width="882" height="284" alt="image" src="https://github.com/user-attachments/assets/079a8923-befa-4be8-be7a-7cbbc7500b5b" />
+</a>
+<a href="https://creativecommons.org/licenses/by-nc/4.0/">
+  <img width="882" height="746" alt="image" src="https://github.com/user-attachments/assets/126d922d-2255-4699-bc8a-355e2b3195d2" />
+</a>
+
+
